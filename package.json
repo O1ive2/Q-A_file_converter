@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "node src/main.js"
+  },
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "mammoth": "^1.7.1"
+  }
+}
