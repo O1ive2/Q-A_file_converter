@@ -2,7 +2,7 @@ const mammoth = require("mammoth");
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
 
 const csvWriter = createCsvWriter({
-  path: "repo/飞书qa2.csv",
+  path: "repo/processed_files/心大直播训练数据_2024_5_10.csv",
   header: [
     { id: "question", title: "QUESTION" },
     { id: "answer", title: "ANSWER" },
@@ -10,7 +10,9 @@ const csvWriter = createCsvWriter({
 });
 
 mammoth
-  .extractRawText({ path: "repo/飞书qa2.docx" })
+  .extractRawText({
+    path: "repo/心大直播训练数据_2024_5_10.docx",
+  })
   .then(function (result) {
     const text = result.value; // The raw text
     const lines = text.split("\n");
